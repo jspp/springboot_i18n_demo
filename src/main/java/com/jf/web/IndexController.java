@@ -1,6 +1,7 @@
 package com.jf.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 国际化 测试
@@ -12,5 +13,22 @@ import org.springframework.stereotype.Controller;
 public class IndexController {
 
 
+    /**
+     * 首页
+     * @return
+     */
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
+
+    /**
+     * 切换语言
+     * @return
+     */
+    @RequestMapping("/change")
+    public String change(){
+        return "index";
+    }
 
 }
